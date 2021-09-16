@@ -1,0 +1,52 @@
+.TheCorridor {
+  background-image: url('../../Img/CorridorSection/BackgroundFullWidth.jpg');
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.neon {
+  color: white;
+  font-weight: 500;
+  letter-spacing: .1em;
+  font-size: 17px;
+  transition: .7s ease all;
+}
+
+.container:hover #a {
+  text-shadow: 0 0 5px #bdb1fa,
+    0 0 6px #bdb1fa,
+    0 0 14px #bdb1fa,
+    0 0 18px #bdb1fa,
+    0 0 26px #bdb1fa;
+}
+
+.container:hover #b {
+  text-shadow: 0 0 5px lightsalmon,
+    0 0 6px lightsalmon,
+    0 0 14px lightsalmon,
+    0 0 18px lightsalmon,
+    0 0 26px lightsalmon;
+}
+
+.container:hover #c {
+  text-shadow: 0 0 5px lightblue,
+    0 0 6px lightblue,
+    0 0 14px lightblue,
+    0 0 18px lightblue,
+    0 0 26px lightblue;
+}
+
+.container:hover #d {
+  text-shadow: 0 0 5px lightseagreen,
+    0 0 6px lightseagreen,
+    0 0 14px lightseagreen,
+    0 0 18px lightseagreen,
+    0 0 26px lightseagreen;
+}
