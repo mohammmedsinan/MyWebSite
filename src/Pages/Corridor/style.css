@@ -21,32 +21,32 @@
 
 .container:hover #a {
   text-shadow: 0 0 5px #bdb1fa,
-    0 0 6px #bdb1fa,
-    0 0 14px #bdb1fa,
-    0 0 18px #bdb1fa,
-    0 0 26px #bdb1fa;
+    0 0 10px #bdb1fa,
+    0 0 34px #bdb1fa,
+    0 0 40px #bdb1fa,
+    0 0 45px #bdb1fa;
 }
 
 .container:hover #b {
   text-shadow: 0 0 5px lightsalmon,
-    0 0 6px lightsalmon,
-    0 0 14px lightsalmon,
-    0 0 18px lightsalmon,
-    0 0 26px lightsalmon;
+    0 0 10px lightsalmon,
+    0 0 34px lightsalmon,
+    0 0 40px lightsalmon,
+    0 0 45px lightsalmon;
 }
 
 .container:hover #c {
   text-shadow: 0 0 5px lightblue,
-    0 0 6px lightblue,
-    0 0 14px lightblue,
-    0 0 18px lightblue,
-    0 0 26px lightblue;
+    0 0 10px lightblue,
+    0 0 34px lightblue,
+    0 0 40px lightblue,
+    0 0 45px lightblue;
 }
 
 .container:hover #d {
   text-shadow: 0 0 5px lightseagreen,
-    0 0 6px lightseagreen,
-    0 0 14px lightseagreen,
-    0 0 18px lightseagreen,
-    0 0 26px lightseagreen;
+    0 0 10px lightseagreen,
+    0 0 34px lightseagreen,
+    0 0 40px lightseagreen,
+    0 0 45px lightseagreen;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import Bushes from '../../Components/Bushes';
 import { useHistory } from 'react-router-dom';
 import { gsap, Power2 } from 'gsap';
 import './style.css';
