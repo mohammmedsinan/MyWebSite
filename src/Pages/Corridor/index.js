@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import { gsap, Power2, Power0 } from 'gsap';
 import Media from 'react-media';
 import './style.css';
-import './media.css';
 
 function Corridor() {
   const [Sections, setSections] = useState(0);
