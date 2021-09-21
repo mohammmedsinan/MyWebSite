@@ -12,7 +12,7 @@ function Portfolio() {
   const TL1 = gsap.timeline({ defaults: { duration: 0.4 } });
   const TL = gsap.timeline({ defaults: { duration: 0.5 } });
   useEffect(() => {
-    TL.from('.dudes', { scale: 2, ease: Power4.easeInOut });
+    TL.from('.dudes', { scale: 3, ease: Power4.easeInOut });
   }, []);
   const PortfolioPreview = ({
     className,

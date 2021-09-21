@@ -1,0 +1,27 @@
+@media(max-width:800px) {
+  .section-2-img {
+    width: 20vw !important;
+  }
+
+  .section-2-container {
+    width: 30vw !important;
+    height: 20vh;
+  }
+}
+
+@media(max-width:550px) {
+  .section-2-img {
+    width: 25vw !important;
+  }
+
+}
+
+@media(max-width:450px) {
+  .section-2-img {
+    width: 20vw !important;
+  }
+
+  .section-2-container {
+    height: 15vh !important;
+  }
+}

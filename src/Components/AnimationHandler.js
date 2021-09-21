@@ -30,7 +30,6 @@ function AnimationHandler() {
         display: 'flex',
         justifyContent: 'center',
         height: '100vh',
-        display: 'none',
       }}
     >
       <div
