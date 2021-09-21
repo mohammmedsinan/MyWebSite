@@ -99,7 +99,7 @@ function Corridor() {
                       className="d"
                       translateX="-60%"
                       textInside="Contact Me"
-                      CallBack="Contact-Me"
+                      CallBack="ContactMe"
                     />
                   </div>
                 ) : (
@@ -175,7 +175,7 @@ function Corridor() {
                         <ImgFunction
                           className="d"
                           textInside="Contact Me"
-                          CallBack="Contact-Me"
+                          CallBack="ContactMe"
                           width="40vw"
                           fontSize="25px"
                           translate={true}
