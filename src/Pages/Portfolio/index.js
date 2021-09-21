@@ -2,16 +2,18 @@ import Second from '../../Img/Portfolio/Second.jpg';
 import Thierd from '../../Img/Portfolio/Thierd.jpg';
 import { GithubOutlined } from '@ant-design/icons';
 import First from '../../Img/Portfolio/First.jpg';
-import React, { useEffect } from 'react';
-import { Button } from 'antd';
 import { gsap, Power4 } from 'gsap';
+import { Button } from 'antd';
+import React, { useEffect } from 'react';
 import './style.css';
 import './midea.css';
 
 function Portfolio() {
   const TL1 = gsap.timeline({ defaults: { duration: 0.4 } });
-  const TL = gsap.timeline({ defaults: { duration: 0.4 } });
-  useEffect(() => {}, []);
+  const TL = gsap.timeline({ defaults: { duration: 0.5 } });
+  useEffect(() => {
+    TL.from('.dudes', { scale: 2, ease: Power4.easeInOut });
+  }, []);
   const PortfolioPreview = ({
     className,
     expand = false,
@@ -36,13 +38,16 @@ function Portfolio() {
         }}
         className={className}
         style={{
-          width: '40%',
+          width: '40vw',
           backgroundColor: '#FCEAFF',
           height: '40vh',
           marginBottom: '50px',
           cursor: 'pointer',
           overflow: 'hidden',
           borderRadius: '10px',
+          boxShadow: '0px 0px 20px #7d53c2',
+          maxHeight: '310px',
+          maxWidth: '570px',
         }}
       >
         <img src={IMG} id={className} />
@@ -51,16 +56,19 @@ function Portfolio() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'space-around',
+            justifyContent: 'center',
             height: '100%',
             padding: '10px 40px',
           }}
         >
-          <h1 style={{ textAlign: 'center', color: '#341861', fontWeight: 'bold' }}>
+          <h1
+            style={{ textAlign: 'center', color: '#341861', fontWeight: 'bold' }}
+            className="h1-section-one"
+          >
             {ProjectName}
           </h1>
           {!explain ? (
-            <p style={{ color: 'gray' }}>
+            <p style={{ color: 'gray' }} className="p-section-one">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
@@ -86,11 +94,12 @@ function Portfolio() {
               }}
               href={github}
               target="blank"
+              className="a-section-one"
             >
               <span style={{ color: '#341861' }}>The Source Code</span>
               <GithubOutlined style={{ color: '#341861', fontSize: '30px' }} />
             </a>
-            <Button>
+            <Button className="btn-section-one">
               <a href={website} target="blank">
                 See the website live
               </a>
@@ -103,9 +112,18 @@ function Portfolio() {
   return (
     <div style={{ overflow: 'hidden', position: 'relative' }}>
       <div className="LOADFING-SECTION"></div>
-      <div
-        style={{ width: '100%', height: '100%', backgroundColor: '#341861', paddingTop: '150px' }}
-      >
+      <div style={{ width: '100%', height: '100%', backgroundColor: '#351a63' }} className="dudes">
+        <p
+          style={{
+            textAlign: 'center',
+            fontSize: '40px',
+            color: 'white',
+            fontWeight: 'bolder',
+            padding: '30px 0px',
+          }}
+        >
+          My last current work
+        </p>
         <div
           style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}
           className="Container"
@@ -129,7 +147,7 @@ function Portfolio() {
             className="e"
             IMG={Thierd}
             ProjectName="Green Tree"
-            website="https://mohammmedsinan.github.io/Re-Build-W/#"
+            website="https://mohammmedsinan.github.io/Re-Build-W"
             github="https://github.com/mohammmedsinan/Re-Build-W"
           />
           <PortfolioPreview className="r" IMG={First} ProjectName="Ant Desgin Project" />

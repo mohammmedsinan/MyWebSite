@@ -60,3 +60,33 @@
     height: 54vw !important;
   }
 }
+
+@media(max-width:500px) {
+  .h1-section-one {
+    font-size: 20px !important;
+  }
+
+  .p-section-one {
+    font-size: 10px !important;
+  }
+
+  .btn-section-one {
+    min-width: 30% !important;
+    font-size: 60% !important;
+  }
+
+  .a-section-one {
+    font-size: 8px !important;
+  }
+
+  .anticon-github {
+    font-size: 24px !important;
+    margin-left: 5px;
+  }
+}
+
+@media(max-width:1073px) {
+  .animation-h-2 {
+    top: 19% !important;
+  }
+}
