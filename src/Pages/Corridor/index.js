@@ -26,6 +26,8 @@ function Corridor() {
   };
   useEffect(() => {
     TL.from('.TheCorridor', { scale: 1.4, ease: Power2.easeInOut });
+    localStorage.setItem('Checking', true);
+    console.log(localStorage.getItem('Checking'));
   }, []);
   const ImgFunction = ({
     src,
@@ -67,7 +69,7 @@ function Corridor() {
   };
   return (
     <>
-      <AnimationHandlers />
+      {localStorage.getItem('Checking') !== 'true' && <AnimationHandlers />}
       <div style={{ backgroundColor: '#412f61', overflow: 'hidden' }}>
         <div className="Main-Container" style={{ overflow: 'hidden' }}>
           <div className="TheCorridor">
@@ -91,7 +93,7 @@ function Corridor() {
                       className="c"
                       translateX="-25%"
                       textInside="About Me"
-                      CallBack="About-Me"
+                      CallBack="AboutMe"
                     />
                     <ImgFunction
                       className="d"
@@ -163,7 +165,7 @@ function Corridor() {
                         <ImgFunction
                           className="c"
                           textInside="About Me"
-                          CallBack="About-Me"
+                          CallBack="AboutMe"
                           width="40vw"
                           fontSize="25px"
                           translate={true}
