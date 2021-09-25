@@ -10,7 +10,18 @@ import './style.css';
 
 const mainStyle = { fontSize: '250px', color: 'white', textAlign: 'center', margin: '0.2rem' };
 
-function FirstScene() {
+function FirstScene({
+  stylesintroduction1,
+  stylesintroduction2,
+  stylesintroduction3,
+  sectionH1_1_1,
+  sectionH1_1_2,
+  sectionH1_2_1,
+  sectionH1_3_1,
+  sectionH1_3_2,
+  FirstLogoStyles,
+  FirstText_styles,
+}) {
   const TL = gsap.timeline({ defaults: { duration: 0.7, ease: Power2.easeInOut } });
   useEffect(() => {
     TL.fromTo('.section-3-introduction-1', { y: '-100%' }, { y: '7%' });
@@ -59,25 +70,24 @@ function FirstScene() {
     TL.to('.gos', { opacity: 0 }, 21.2);
     TL.to('.animation-blocker-2', { y: '-100vh', duration: 1.6 });
     TL.to('.animation-blocker-3', { y: '100vh', duration: 1.6 }, 22.3);
-    TL.to('.section-3-container-5', { display: 'none' });
-    TL.to('.section-3-container-5', { display: 'none' });
-    TL.to('.section-3-container-6', { opacity: '1' });
+    TL.to('.section-3-container-5', { display: 'none' }, 23);
+    TL.to('.section-3-container-6', { opacity: '1' }, 23.3);
   }, []);
   return (
     <div>
       {/* A Scene Start*/}
       <div className="section-3-container">
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <h1 className="section-3-introduction-1" style={mainStyle}>
+          <h1 className="section-3-introduction-1" style={{ ...mainStyle, ...stylesintroduction1 }}>
             Hello
           </h1>
-          <h1 className="section-3-introduction-2" style={mainStyle}>
+          <h1 className="section-3-introduction-2" style={{ ...stylesintroduction2, ...mainStyle }}>
             ,
           </h1>
         </div>
         <h1
           className="section-3-introduction-3"
-          style={{ color: 'white', textAlign: 'center', fontSize: '60px' }}
+          style={{ color: 'white', textAlign: 'center', fontSize: '60px', ...stylesintroduction3 }}
         >
           I am <span style={{ color: '#ac8fd3', fontSize: '80px' }}>Mohammed</span> , Nice to meet
           you
@@ -96,11 +106,11 @@ function FirstScene() {
         }}
         className="section-3-container-2"
       >
-        <h1 className="section-3-h1-1" style={{ opacity: 0, color: '#ac8fd3' }}>
+        <h1 className="section-3-h1-1" style={{ opacity: 0, color: '#ac8fd3', ...sectionH1_1_1 }}>
           18
         </h1>
-        <h1 className="section-3-h1-2" style={{ opacity: 0, color: 'white' }}>
-          Is my age
+        <h1 className="section-3-h1-2" style={{ opacity: 0, color: 'white', ...sectionH1_1_2 }}>
+          is my age
         </h1>
       </div>
       {/* B Scene End*/}
@@ -116,7 +126,10 @@ function FirstScene() {
           flexDirection: 'column',
         }}
       >
-        <h1 style={{ fontSize: '60px', color: 'white', opacity: 0 }} className="section-3-h1-3">
+        <h1
+          style={{ fontSize: '60px', color: 'white', opacity: 0, ...sectionH1_2_1 }}
+          className="section-3-h1-3"
+        >
           I am Living there called <span style={{ color: '#ac8fd3' }}>MIDDLE EAST</span>
         </h1>
         <img src={MiddlEastMap} width="400vw" className="Map" style={{ opacity: 0 }} />
@@ -147,10 +160,16 @@ function FirstScene() {
           }}
           className="diving"
         >
-          <h1 style={{ color: 'white', fontSize: '80px', opacity: 0 }} className="section-3-h1-4">
+          <h1
+            style={{ color: 'white', fontSize: '80px', opacity: 0, ...sectionH1_3_1 }}
+            className="section-3-h1-4"
+          >
             I am a <span style={{ color: '#ac8fd3' }}>FullStack</span> Developer
           </h1>
-          <h1 style={{ color: 'white', fontSize: '60px', opacity: 0 }} className="section-3-h1-5">
+          <h1
+            style={{ color: 'white', fontSize: '60px', opacity: 0, ...sectionH1_3_2 }}
+            className="section-3-h1-5"
+          >
             <span>, </span>
             <span style={{ color: '#339e40' }}>M</span>
             <span style={{ color: '#cc7c6e' }}>E</span>
@@ -196,26 +215,26 @@ function FirstScene() {
           }}
         >
           <div className="img-handler-section-3">
-            <img src={mongodb} className="imgStyles1" />
-            <p className="section-4-p-1">
+            <img src={mongodb} className="imgStyles1" style={{ ...FirstLogoStyles }} />
+            <p className="section-4-p-1" style={{ ...FirstText_styles }}>
               <span style={{ color: '#339e40' }}>M</span>ongo DB
             </p>
           </div>
           <div className="img-handler-section-3">
-            <img src={express} className="imgStyles2" />
-            <p className="section-4-p-2">
+            <img src={express} className="imgStyles2" style={{ ...FirstLogoStyles }} />
+            <p className="section-4-p-2" style={{ ...FirstText_styles }}>
               <span style={{ color: '#cc7c6e' }}>E</span>xpress
             </p>
           </div>
           <div className="img-handler-section-3">
-            <img src={Reacts} className="imgStyles3" />
-            <p className="section-4-p-3">
+            <img src={Reacts} className="imgStyles3" style={{ ...FirstLogoStyles }} />
+            <p className="section-4-p-3" style={{ ...FirstText_styles }}>
               <span style={{ color: '#73ceec' }}>R</span>eact
             </p>
           </div>
           <div className="img-handler-section-3">
-            <img src={nodejs} className="imgStyles4" />
-            <p className="section-4-p-4">
+            <img src={nodejs} className="imgStyles4" style={{ ...FirstLogoStyles }} />
+            <p className="section-4-p-4" style={{ ...FirstText_styles }}>
               <span style={{ color: '#9abe48' }}>N</span>ode JS
             </p>
           </div>

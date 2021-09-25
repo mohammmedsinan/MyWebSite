@@ -1,5 +1,5 @@
 import { UpCircleOutlined, DownCircleOutlined } from '@ant-design/icons';
-import MainDoor from '../../Img/CorridorSection/MainDoor.png';
+import MainDoor from '../../Img/door.png';
 import AnimationHandlers from '../../Components/AnimationHandler';
 import { useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -52,7 +52,7 @@ function Corridor() {
           id={className}
           style={{
             fontSize: fontSize,
-            transform: translate ? 'translate(0px , 90px)' : 'translate(0px , 70px)',
+            transform: translate ? 'translate(0px , 60px)' : 'translate(0px , 40px)',
           }}
           className="neon"
         >
@@ -61,7 +61,7 @@ function Corridor() {
         <img
           className={className}
           src={src ? src : MainDoor}
-          style={{ width: width ? width : '12vw' }}
+          style={{ width: width ? width : '16vw' }}
           onClick={() => AnimationHandler(className, translateX, CallBack)}
         />
       </div>

@@ -30,7 +30,12 @@ function index() {
         flexDirection: 'column',
       }}
     >
-      <div></div>
+      <div />
+      <div>
+        <h1 style={{ color: 'white', fontSize: '100px' }} className="section-5-h1">
+          Mohammed Sinan
+        </h1>
+      </div>
       <div
         style={{
           display: 'flex',
@@ -45,11 +50,7 @@ function index() {
         <ReUseAbleComponent IMG={Github} LINK="https://github.com/mohammmedsinan" />
         <ReUseAbleComponent IMG={Instagram} LINK="https://www.instagram.com/_trainheartent/" />
       </div>
-      <div>
-        <h1 style={{ color: '#ac8fd3', fontSize: '100px' }} className="section-5-h1">
-          Mohammed Sinan
-        </h1>
-      </div>
+
       <div
         style={{
           display: 'flex',
@@ -63,9 +64,13 @@ function index() {
         <Input placeholder="Input Your Password" style={{ width: '80vw', height: '8vh' }} />
         <Input placeholder="Input Your Password" style={{ width: '80vw', height: '8vh' }} />
         <Input placeholder="Input Your Name" style={{ width: '80vw', height: '8vh' }} />
-        <Button>Submit</Button>
+        <Button
+          style={{ color: 'white', backgroundColor: '#ac8fd3', border: 'none', width: '12vw' }}
+        >
+          Submit
+        </Button>
       </div>
-      <div></div>
+      <div />
     </div>
   );
 }

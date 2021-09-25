@@ -31,3 +31,13 @@
     width: 70px !important;
   }
 }
+
+.ant-input {
+  background-color: #ac8fd3 !important;
+  border: none !important;
+  color: white !important;
+}
+
+::placeholder {
+  color: white !important;
+}

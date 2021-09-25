@@ -4,8 +4,8 @@ import './style.css';
 const SecondSection = () => {
   const ReUseAble = ({ paragraph }) => {
     return (
-      <div>
-        <p style={{ color: 'white' }}>{paragraph}</p>
+      <div style={{ width: '80vw' }}>
+        <p style={{ color: 'white', fontWeight: 'bold', fontSize: '30px' }}>{paragraph}</p>
       </div>
     );
   };
@@ -16,13 +16,15 @@ const SecondSection = () => {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
+        backgroundColor: '#6357a0',
+        height: '100vh',
       }}
     >
       <ReUseAble
         paragraph="Hello Again ,
-       Now I am Full Stack Developer And full time web programming  , 
+       Now I am a Full Stack Developer And full time web programming  , 
       I did Work as a FreeLancer on so much platforms  , 
-      My Biggest experience was programming with a Epic Games Team "
+      My Biggest experience was programming with an Epic Games Team "
       />
       <ReUseAble
         paragraph="
