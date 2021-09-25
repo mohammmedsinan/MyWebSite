@@ -1,7 +1,12 @@
 import React from 'react';
+import FirstScene from './FirstScene';
 
 function DesktopSession() {
-  return <div>Desktop Session</div>;
+  return (
+    <div>
+      <FirstScene />
+    </div>
+  );
 }
 
 export default DesktopSession;

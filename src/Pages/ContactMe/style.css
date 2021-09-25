@@ -1,0 +1,33 @@
+@media(max-width:900px) {
+  .div-section-5-1 {
+    width: 75vw !important;
+  }
+
+  .section-5-h1 {
+    font-size: 70px !important;
+  }
+
+  .ant-input {
+    height: 6vh !important;
+  }
+}
+
+@media(max-width:660px) {
+  .section-5-h1 {
+    font-size: 50px !important;
+  }
+}
+
+@media(max-width:480px) {
+  .section-5-h1 {
+    font-size: 32px !important;
+  }
+
+  .section-5-div-2 {
+    justify-content: space-evenly !important;
+  }
+
+  .section-5-img {
+    width: 70px !important;
+  }
+}

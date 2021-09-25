@@ -1,0 +1,85 @@
+.HidePide {
+  font-size: 80px;
+  color: white;
+  display: inline;
+}
+
+.imgStyles {
+  width: 10vw;
+}
+
+.imgStyles1 {
+  width: 10vw;
+  opacity: 0;
+}
+
+.imgStyles2 {
+  width: 10vw;
+  opacity: 0;
+}
+
+.imgStyles3 {
+  width: 10vw;
+  opacity: 0;
+}
+
+.imgStyles4 {
+  width: 10vw;
+  opacity: 0;
+}
+
+.img-handler-section-3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25vw;
+}
+
+.section-4-p-1 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.section-4-p-2 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.section-4-p-3 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.section-4-p-4 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.section-A-1 {
+  background-color: #351a63;
+  width: 100vw;
+  margin: 20px 0px;
+  color: white;
+}
+
+.section-A-2 {
+  background-color: #351a63;
+  width: 100vw;
+  margin: 20px 0px;
+  color: white;
+}
+
+.section-A-3 {
+  background-color: #351a63;
+  width: 100vw;
+  margin: 20px 0px;
+  color: white;
+}
