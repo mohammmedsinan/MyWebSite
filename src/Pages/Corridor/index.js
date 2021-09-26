@@ -118,7 +118,7 @@ function Corridor() {
                       <div>
                         {Sections !== 3 && (
                           <UpCircleOutlined
-                            style={{ fontSize: '40px', cursor: 'pointer', color: '#4e93dc' }}
+                            style={{ fontSize: '40px', cursor: 'pointer', color: 'white' }}
                             onClick={() => {
                               TL1.to('.simple', { y: '-970px', ease: Power0.easeIn })
                                 .then(() => setSections(Sections + 1))
@@ -130,7 +130,7 @@ function Corridor() {
                       <div>
                         {Sections > 0 && (
                           <DownCircleOutlined
-                            style={{ fontSize: '40px', cursor: 'pointer', color: '#4e93dc' }}
+                            style={{ fontSize: '40px', cursor: 'pointer', color: 'white' }}
                             onClick={() => {
                               TL1.to('.simple', { y: '770px', ease: Power0.easeIn })
                                 .then(() => setSections(Sections - 1))

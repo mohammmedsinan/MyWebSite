@@ -1,0 +1,81 @@
+@media(max-width:820px) {
+  .section-3-h1-3 {
+    font-size: 40px !important;
+  }
+
+  .section-3-h1-4 {
+    font-size: 40px !important;
+  }
+}
+
+@media(max-width:670px) {
+  .imgs {
+    width: 15vw !important;
+  }
+
+  .section-4-p-3-m {
+    font-size: 25px !important;
+  }
+
+  .section-3-h1-3 {
+    font-size: 40px !important;
+  }
+
+  .section-3-introduction-3 {
+    font-size: 50px !important;
+  }
+
+  .section-3-introduction-1 {
+    font-size: 190px !important;
+  }
+
+  .section-3-introduction-2 {
+    font-size: 190px !important;
+  }
+
+  .section-5-span-1 {
+    font-size: 50px !important;
+  }
+}
+
+@media(max-width:420px) {
+  .section-3-introduction-3 {
+    font-size: 30px !important;
+  }
+
+  .section-3-introduction-1 {
+    font-size: 130px !important;
+  }
+
+  .section-3-introduction-2 {
+    font-size: 130px !important;
+  }
+
+  .section-5-span-1 {
+    font-size: 30px !important;
+  }
+
+  .section-3-h1-3 {
+    font-size: 20px !important;
+  }
+
+  .section-3-h1-4 {
+    font-size: 30px !important;
+  }
+
+  .section-3-h1-5 {
+    font-size: 40px !important;
+  }
+
+  .imgs {
+    width: 25vw !important;
+  }
+
+  .section-4-p-3-m {
+    font-size: 15px !important;
+  }
+
+  .img-handler-section-3 {
+    width: 80vw !important;
+  }
+}

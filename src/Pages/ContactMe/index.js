@@ -60,12 +60,12 @@ function index() {
           height: '40vh',
         }}
       >
-        <Input placeholder="Input Your Gmail" style={{ width: '80vw', height: '8vh' }} />
-        <Input placeholder="Input Your Password" style={{ width: '80vw', height: '8vh' }} />
-        <Input placeholder="Input Your Password" style={{ width: '80vw', height: '8vh' }} />
-        <Input placeholder="Input Your Name" style={{ width: '80vw', height: '8vh' }} />
+        <Input placeholder="Input Your Gmail" style={{ width: '70vw', height: '6vh' }} />
+        <Input placeholder="Input Your Password" style={{ width: '70vw', height: '6vh' }} />
+        <Input placeholder="Input Your Password" style={{ width: '70vw', height: '6vh' }} />
+        <Input placeholder="Input Your Name" style={{ width: '70vw', height: '6vh' }} />
         <Button
-          style={{ color: 'white', backgroundColor: '#ac8fd3', border: 'none', width: '12vw' }}
+          style={{ color: 'white', backgroundColor: '#ac8fd3', border: 'none', width: '100px' }}
         >
           Submit
         </Button>

@@ -21,16 +21,17 @@ function FirstScene({
   sectionH1_3_2,
   FirstLogoStyles,
   FirstText_styles,
+  scale_h1,
 }) {
   const TL = gsap.timeline({ defaults: { duration: 0.7, ease: Power2.easeInOut } });
   useEffect(() => {
-    TL.fromTo('.section-3-introduction-1', { y: '-100%' }, { y: '7%' });
-    TL.fromTo('.section-3-introduction-2', { y: '-100vh' }, { y: '6vh' });
-    TL.fromTo('.section-3-introduction-3', { y: '-100vh' }, { y: '10vh', ease: Power2.easeInOut });
+    TL.fromTo('.section-3-introduction-1', { y: '-200vh' }, { y: '7%' });
+    TL.fromTo('.section-3-introduction-2', { y: '-200vh' }, { y: '6vh' });
+    TL.fromTo('.section-3-introduction-3', { y: '-200vh' }, { y: '10vh', ease: Power2.easeInOut });
     TL.to('.section-3-container', { x: '-100%', ease: Power2.easeInOut }, 3);
     TL.to('.section-3-container', { display: 'none' }, 3);
     TL.fromTo('.section-3-h1-1', { scale: 100 }, { scale: 7, opacity: 1 });
-    TL.fromTo('.section-3-h1-2', { scale: 100 }, { scale: 7, opacity: 1 });
+    TL.fromTo('.section-3-h1-2', { scale: 100 }, { scale: scale_h1, opacity: 1 });
     TL.to('.section-3-container-2', { y: '-100%' }, 5.8);
     TL.to('.section-3-container-2', { display: 'none' }, 5.9);
     TL.fromTo('.Map', { y: '100vh' }, { y: '0vh', opacity: 1 });
@@ -89,8 +90,11 @@ function FirstScene({
           className="section-3-introduction-3"
           style={{ color: 'white', textAlign: 'center', fontSize: '60px', ...stylesintroduction3 }}
         >
-          I am <span style={{ color: '#ac8fd3', fontSize: '80px' }}>Mohammed</span> , Nice to meet
-          you
+          I am_
+          <span className="section-5-span-1" style={{ color: '#ac8fd3', fontSize: '80px' }}>
+            Mohammed
+          </span>
+          , Nice to meet you
         </h1>
       </div>
       {/* A Scene End*/}
@@ -126,10 +130,7 @@ function FirstScene({
           flexDirection: 'column',
         }}
       >
-        <h1
-          style={{ fontSize: '60px', color: 'white', opacity: 0, ...sectionH1_2_1 }}
-          className="section-3-h1-3"
-        >
+        <h1 className="section-3-h1-3">
           I am Living there called <span style={{ color: '#ac8fd3' }}>MIDDLE EAST</span>
         </h1>
         <img src={MiddlEastMap} width="400vw" className="Map" style={{ opacity: 0 }} />
@@ -215,26 +216,26 @@ function FirstScene({
           }}
         >
           <div className="img-handler-section-3">
-            <img src={mongodb} className="imgStyles1" style={{ ...FirstLogoStyles }} />
-            <p className="section-4-p-1" style={{ ...FirstText_styles }}>
+            <img src={mongodb} className="imgStyles1 imgs" style={{ ...FirstLogoStyles }} />
+            <p className="section-4-p-1 section-4-p-3-m" style={{ ...FirstText_styles }}>
               <span style={{ color: '#339e40' }}>M</span>ongo DB
             </p>
           </div>
           <div className="img-handler-section-3">
-            <img src={express} className="imgStyles2" style={{ ...FirstLogoStyles }} />
-            <p className="section-4-p-2" style={{ ...FirstText_styles }}>
+            <img src={express} className="imgStyles2 imgs" style={{ ...FirstLogoStyles }} />
+            <p className="section-4-p-2 section-4-p-3-m" style={{ ...FirstText_styles }}>
               <span style={{ color: '#cc7c6e' }}>E</span>xpress
             </p>
           </div>
           <div className="img-handler-section-3">
-            <img src={Reacts} className="imgStyles3" style={{ ...FirstLogoStyles }} />
-            <p className="section-4-p-3" style={{ ...FirstText_styles }}>
+            <img src={Reacts} className="imgStyles3 imgs" style={{ ...FirstLogoStyles }} />
+            <p className="section-4-p-3 section-4-p-3-m" style={{ ...FirstText_styles }}>
               <span style={{ color: '#73ceec' }}>R</span>eact
             </p>
           </div>
           <div className="img-handler-section-3">
-            <img src={nodejs} className="imgStyles4" style={{ ...FirstLogoStyles }} />
-            <p className="section-4-p-4" style={{ ...FirstText_styles }}>
+            <img src={nodejs} className="imgStyles4 imgs" style={{ ...FirstLogoStyles }} />
+            <p className="section-4-p-4 section-4-p-3-m" style={{ ...FirstText_styles }}>
               <span style={{ color: '#9abe48' }}>N</span>ode JS
             </p>
           </div>
