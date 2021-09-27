@@ -72,10 +72,10 @@ function Corridor() {
       {localStorage.getItem('Checking') !== 'true' && <AnimationHandlers />}
       <div style={{ backgroundColor: '#412f61', overflow: 'hidden' }}>
         <div className="Main-Container" style={{ overflow: 'hidden' }}>
-          <div className="TheCorridor">
-            <Media query="(min-width : 800px)">
-              {(matches) => {
-                return matches ? (
+          <Media query="(min-width : 800px)">
+            {(matches) => {
+              return matches ? (
+                <div className="TheCorridor">
                   <div style={{ display: 'flex', justifyContent: 'space-evenly', width: '100vw' }}>
                     <ImgFunction
                       className="a"
@@ -102,91 +102,48 @@ function Corridor() {
                       CallBack="ContactMe"
                     />
                   </div>
-                ) : (
-                  <>
-                    <div
-                      style={{
-                        position: 'absolute',
-                        top: '0px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-around',
-                        height: '100vh',
-                        right: '10px',
-                      }}
+                </div>
+              ) : (
+                <>
+                  <div
+                    style={{
+                      backgroundColor: '#351a63',
+                      height: '100vh',
+                      width: '100vw',
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-evenly',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      textAlign: 'center',
+                    }}
+                  >
+                    <h1
+                      className="List-NAv-Mobile LNM-1"
+                      onClick={() => history.push('/Portfolio')}
                     >
-                      <div>
-                        {Sections !== 3 && (
-                          <UpCircleOutlined
-                            style={{ fontSize: '40px', cursor: 'pointer', color: 'white' }}
-                            onClick={() => {
-                              TL1.to('.simple', { y: '-970px', ease: Power0.easeIn })
-                                .then(() => setSections(Sections + 1))
-                                .then(() => TL1.reverse());
-                            }}
-                          />
-                        )}
-                      </div>
-                      <div>
-                        {Sections > 0 && (
-                          <DownCircleOutlined
-                            style={{ fontSize: '40px', cursor: 'pointer', color: 'white' }}
-                            onClick={() => {
-                              TL1.to('.simple', { y: '770px', ease: Power0.easeIn })
-                                .then(() => setSections(Sections - 1))
-                                .then(() => TL1.reverse());
-                            }}
-                          />
-                        )}
-                      </div>
-                    </div>
-                    <div className="simple">
-                      {Sections === 0 && (
-                        <ImgFunction
-                          className="a"
-                          textInside="Portfolio"
-                          CallBack="Portfolio"
-                          width="40vw"
-                          fontSize="25px"
-                          translate={true}
-                        />
-                      )}
-                      {Sections === 1 && (
-                        <ImgFunction
-                          className="b"
-                          textInside="Experience"
-                          CallBack="Experience"
-                          width="40vw"
-                          fontSize="25px"
-                          translate={true}
-                        />
-                      )}
-                      {Sections === 2 && (
-                        <ImgFunction
-                          className="c"
-                          textInside="About Me"
-                          CallBack="AboutMe"
-                          width="40vw"
-                          fontSize="25px"
-                          translate={true}
-                        />
-                      )}
-                      {Sections === 3 && (
-                        <ImgFunction
-                          className="d"
-                          textInside="Contact Me"
-                          CallBack="ContactMe"
-                          width="40vw"
-                          fontSize="25px"
-                          translate={true}
-                        />
-                      )}
-                    </div>
-                  </>
-                );
-              }}
-            </Media>
-          </div>
+                      Portfolio
+                    </h1>
+                    <h1
+                      className="List-NAv-Mobile LNM-2"
+                      onClick={() => history.push('/Experience')}
+                    >
+                      Experience
+                    </h1>
+                    <h1 className="List-NAv-Mobile LNM-3" onClick={() => history.push('/AboutMe')}>
+                      About Me
+                    </h1>
+                    <h1
+                      className="List-NAv-Mobile LNM-4"
+                      onClick={() => history.push('/ContactMe')}
+                    >
+                      Contact Me
+                    </h1>
+                  </div>
+                </>
+              );
+            }}
+          </Media>
         </div>
       </div>
     </>

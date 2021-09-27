@@ -29,6 +29,7 @@
     0 0 40px lightsalmon,
     0 0 50px lightsalmon,
     0 0 60px lightsalmon;
+  font-weight: bold;
 }
 
 .container:hover #b {
@@ -40,6 +41,7 @@
     0 0 40px lightsalmon,
     0 0 50px lightsalmon,
     0 0 60px lightsalmon;
+  font-weight: bold;
 }
 
 .container:hover #c {
@@ -51,6 +53,7 @@
     0 0 40px lightsalmon,
     0 0 50px lightsalmon,
     0 0 60px lightsalmon;
+  font-weight: bold;
 }
 
 .container:hover #d {
@@ -62,4 +65,28 @@
     0 0 40px lightsalmon,
     0 0 50px lightsalmon,
     0 0 60px lightsalmon;
+  font-weight: bold;
+}
+
+.List-NAv-Mobile {
+  color: white;
+  font-size: 90px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100vw;
+  transition: ease 0.9s all;
+}
+
+.List-NAv-Mobile:hover {
+  background-color: #5296dd;
+  color: #351a63;
+  box-shadow: 0px 0px 20px #5296dd;
+}
+
+@media(max-width:550px) {
+  .List-NAv-Mobile {
+    font-size: 40px !important;
+    padding: 30px 0px;
+
+  }
 }
