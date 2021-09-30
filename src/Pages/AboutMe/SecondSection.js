@@ -1,10 +1,11 @@
 import { CaretLeftOutlined, CaretRightOutlined } from '@ant-design/icons';
 import FirstPage from '../../Components/AboutMeComp/FirstPage';
-import SecondPage from '../../Components/AboutMeComp/SecondPage';
+import SectionA from './SectionA';
+import SectionB from './SectionB';
 import React, { useEffect, useState } from 'react';
 import { gsap, Power2 } from 'gsap';
 
-const ArrayComponents = [<FirstPage />, <SecondPage />];
+const ArrayComponents = [<SectionA />, <SectionB />];
 const constantStyle2 = {
   fontSize: '90px',
   color: 'white',
@@ -13,7 +14,6 @@ const constantStyle2 = {
   display: 'flex',
   alignItems: 'center',
   backgroundColor: '#4e327d',
-  boxShadow: '0px 0px 30px #5d3e92',
 };
 
 function SecondSection() {
@@ -38,8 +38,8 @@ function SecondSection() {
     TL.fromTo(
       '.Ender-the-Animation',
       { scale: '1', display: 'block', y: '0%', filter: 'blur(10px)' },
-      { scale: '0.2' },
-    ).then(() => TL.to('.Ender-the-Animation', { y: '-100%', display: 'none' }));
+      { scale: '0.2', y: '-100%', display: 'none' },
+    );
     TL.fromTo(
       '.Starter-the-Animation',
       { y: '-100vh', display: 'none', scale: 0.2, filter: 'blur(10px)' },
@@ -48,9 +48,7 @@ function SecondSection() {
     TL.to('.Starter-the-Animation', { scale: 1, filter: 'blur(0px)' });
   };
   return (
-    <div
-      style={{ height: '100%', backgroundColor: '#351a63', minHeight: '100vh', overflow: 'hidden' }}
-    >
+    <div style={{ height: '100%', backgroundColor: '#4e327d', minHeight: '100vh' }}>
       {/*main scenes */}
       <div style={{ display: 'flex' }}>
         <div style={{ opacity: 0 }} className="arrow-1">

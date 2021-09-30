@@ -73,7 +73,7 @@ function FirstScene({
     TL.to('.animation-blocker-3', { y: '100vh', duration: 1.6 }, 22.3);
     TL.to('.section-3-container-5', { display: 'none' }, 23);
     TL.to('.the-parent-container', { display: 'none' });
-    TL.to('.section-3-container-6', { display: 'block', duration: 2 });
+    TL.to('.section-3-container-6', { display: 'block', opacity: 1, duration: 0.4 });
   }, []);
   return (
     <>
@@ -267,7 +267,7 @@ function FirstScene({
           {/* F Scene End*/}
         </div>
       </div>
-      <div className="section-3-container-6" style={{ display: 'none' }}>
+      <div className="section-3-container-6" style={{ display: 'none', opacity: 0 }}>
         <SecondSection />
       </div>
     </>
