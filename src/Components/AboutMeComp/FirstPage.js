@@ -3,14 +3,19 @@ import { ExclamationCircleFilled } from '@ant-design/icons';
 
 export const ReUseAble = ({ color, text, IMG, DUMYTEXT }) => {
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: 'flex' }} className="last-container-2">
       {IMG ? (
         IMG
       ) : (
         <ExclamationCircleFilled style={{ color: color, fontSize: '30px', padding: '0px 15px' }} />
       )}
       <div>
-        <p style={{ color: 'white', fontSize: '20px', fontWeight: 'bold' }}>{text}</p>
+        <p
+          style={{ color: 'white', fontSize: '20px', fontWeight: 'bold', marginBottom: '0.1em' }}
+          className="last-p-1"
+        >
+          {text}
+        </p>
         {DUMYTEXT ? (
           DUMYTEXT
         ) : (
@@ -46,6 +51,7 @@ function FirstPage({
       }}
     >
       <h1
+        className="last-header-1"
         style={{
           textAlign: 'center',
           color: colorHeaderText ? colorHeaderText : 'white',
@@ -58,7 +64,7 @@ function FirstPage({
       </h1>
 
       <h2 style={{ textAlign: 'center', color: colorHeaderTwoText ? colorHeaderTwoText : 'white' }}>
-        {HeaderTwoText ? HeaderTwoText : 'The service that I offer'}
+        {HeaderTwoText ? HeaderTwoText : 'The services that I offer'}
       </h2>
       <div
         style={{

@@ -5,6 +5,7 @@ function SectionA() {
   return (
     <div>
       <FirstPage
+        mainBackgroundColor="#579adf73"
         children={
           <>
             <div

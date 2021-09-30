@@ -87,3 +87,20 @@
   }
 
 }
+
+@media(max-width:600px) {
+  .last-container-2 {
+    flex-direction: column !important;
+    text-align: center;
+    margin: 20px 0px;
+  }
+
+  .last-header-1 {
+    font-size: 25px !important;
+  }
+
+  .last-p-1 {
+    font-size: 15px !important;
+  }
+
+}
