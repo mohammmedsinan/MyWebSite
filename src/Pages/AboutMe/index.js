@@ -6,7 +6,7 @@ import './Media.css';
 function index() {
   return (
     <div
-      style={{ backgroundColor: '#351a63', width: '100vw', height: '100vh', overflow: 'hidden' }}
+      style={{ backgroundColor: '#351a63', width: '100vw', height: '100vh', overflowX: 'hidden' }}
     >
       {/* Desktop Session */}
       <Media query="(max-width:2560px)">

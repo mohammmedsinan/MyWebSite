@@ -1,42 +1,78 @@
-import React, { useEffect } from 'react';
+import { CaretLeftOutlined, CaretRightOutlined } from '@ant-design/icons';
+import FirstPage from '../../Components/AboutMeComp/FirstPage';
+import SecondPage from '../../Components/AboutMeComp/SecondPage';
+import React, { useEffect, useState } from 'react';
 import { gsap, Power2 } from 'gsap';
 
-const constantStyle = {
-  width: '100px',
-  height: '100px',
-  borderRadius: '100%',
-  backgroundColor: 'purple',
+const ArrayComponents = [<FirstPage />, <SecondPage />];
+const constantStyle2 = {
+  fontSize: '90px',
+  color: 'white',
+  cursor: 'pointer',
+  height: '100vh',
+  display: 'flex',
+  alignItems: 'center',
+  backgroundColor: '#4e327d',
+  boxShadow: '0px 0px 30px #5d3e92',
 };
+
 function SecondSection() {
-  const TL = gsap.timeline({ defaults: { duration: 1.6, ease: Power2 } });
+  const TL = gsap.timeline({ defaults: { duration: 0.6, ease: Power2 } });
   // useEffect(() => {
-  //   TL.to('.tester1', { x: '84vw', boxShadow: '10px 0px 30px purple' }, 24);
-  //   TL.to('.tester2', { x: '-84vw', boxShadow: '10px 0px 30px purple' }, 24.1);
-  //   TL.to('.h1-section-5-B', { opacity: 1 }, 24.2);
+  //   TL.to('.tester1', { x: '84vw', boxShadow: '10px 0px 30px purple' }, 24.5);
+  //   TL.to('.tester2', { x: '-84vw', boxShadow: '10px 0px 30px purple' }, 24.6);
+  //   TL.to('.h1-section-5-B', { opacity: 1 }, 24.7);
   //   TL.to('.container-section5-B', { y: '-100%' });
+  //   TL.to('.container-section5-B', { display: 'none' }, 25.5);
   // }, []);
   useEffect(() => {
-    TL.to('.tester1', { x: '84vw', boxShadow: '10px 0px 30px purple' });
-    TL.to('.tester2', { x: '-84vw', boxShadow: '10px 0px 30px purple' }, 0.1);
-    TL.to('.h1-section-5-B', { opacity: 1 }, 0.7);
-    TL.to('.container-section5-B', { y: '-100%', duration: 1 }, 2);
+    TL.fromTo('.arrow-1', { x: '-100vw' }, { x: '0vw', opacity: 1 });
+    TL.fromTo('.arrow-2', { x: '100vw' }, { x: '0vw', opacity: 1 }, 0.1);
   }, []);
+  const [CounterSwitcher, setCounterSwitcher] = useState(0);
+  const [History, setHistory] = useState(null);
+  const OnClickHandlerArrows = (condtion) => {
+    setCounterSwitcher(condtion);
+    setHistory(CounterSwitcher);
+
+    TL.fromTo(
+      '.Ender-the-Animation',
+      { scale: '1', display: 'block', y: '0%', filter: 'blur(10px)' },
+      { scale: '0.2' },
+    ).then(() => TL.to('.Ender-the-Animation', { y: '-100%', display: 'none' }));
+    TL.fromTo(
+      '.Starter-the-Animation',
+      { y: '-100vh', display: 'none', scale: 0.2, filter: 'blur(10px)' },
+      { y: '0vh', display: 'block' },
+    );
+    TL.to('.Starter-the-Animation', { scale: 1, filter: 'blur(0px)' });
+  };
   return (
-    <div style={{ width: '100vw', height: '100vh', backgroundColor: '#351a63' }}>
-      <div
-        className="container-section5-B"
-        style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          height: '100vh',
-        }}
-      >
-        <div className="tester1" style={{ ...constantStyle }} />
-        <h1 className="h1-section-5-B" style={{ color: 'white', opacity: 0, fontSize: '50px' }}>
-          My job is to make your business easier
-        </h1>
-        <div className="tester2" style={{ ...constantStyle }} />
+    <div
+      style={{ height: '100%', backgroundColor: '#351a63', minHeight: '100vh', overflow: 'hidden' }}
+    >
+      {/*main scenes */}
+      <div style={{ display: 'flex' }}>
+        <div style={{ opacity: 0 }} className="arrow-1">
+          <CaretLeftOutlined
+            style={{ ...constantStyle2 }}
+            onClick={() => CounterSwitcher > 0 && OnClickHandlerArrows(CounterSwitcher - 1)}
+          />
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100vw' }}>
+          <div style={{ width: '100%' }} className="Starter-the-Animation">
+            {ArrayComponents[CounterSwitcher]}
+          </div>
+          <div style={{ width: '100%', display: 'none' }} className="Ender-the-Animation">
+            {ArrayComponents[History]}
+          </div>
+        </div>
+        <div style={{ opacity: 0 }} className="arrow-2">
+          <CaretRightOutlined
+            style={{ ...constantStyle2 }}
+            onClick={() => CounterSwitcher <= 0 && OnClickHandlerArrows(CounterSwitcher + 1)}
+          />
+        </div>
       </div>
     </div>
   );
