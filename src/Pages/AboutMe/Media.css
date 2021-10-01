@@ -104,3 +104,22 @@
   }
 
 }
+
+@media(max-width:550px) {
+  .last-container-4 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .arrow-1-1 {
+    height: auto !important;
+    transform: rotate(90deg);
+  }
+
+  .container-comp {
+    padding: 0px 20px;
+  }
+
+}

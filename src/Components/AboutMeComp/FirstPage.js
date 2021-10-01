@@ -43,6 +43,7 @@ function FirstPage({
 }) {
   return (
     <div
+      className="container-comp"
       style={{
         height: '100%',
         minHeight: '100vh',

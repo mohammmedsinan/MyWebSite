@@ -8,9 +8,7 @@ import Media from 'react-media';
 import './style.css';
 
 function Corridor() {
-  const [Sections, setSections] = useState(0);
   const TL = gsap.timeline({ defaults: { duration: 0.4 } });
-  const TL1 = gsap.timeline({ defaults: { duration: 0.4 } });
 
   const history = useHistory();
   const AnimationHandler = (className, translateX, CallBack) => {
@@ -59,6 +57,7 @@ function Corridor() {
           {textInside}
         </p>
         <img
+          alt={CallBack}
           className={className}
           src={src ? src : MainDoor}
           style={{ width: width ? width : '16vw' }}

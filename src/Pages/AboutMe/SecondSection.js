@@ -48,11 +48,21 @@ function SecondSection() {
     TL.to('.Starter-the-Animation', { scale: 1, filter: 'blur(0px)' });
   };
   return (
-    <div style={{ height: '100%', backgroundColor: '#4e327d', minHeight: '100vh' }}>
+    <div
+      className="modey"
+      style={{
+        display: 'none',
+        opacity: 0,
+        height: '100%',
+        backgroundColor: '#4e327d',
+        minHeight: '100vh',
+      }}
+    >
       {/*main scenes */}
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex' }} className="last-container-4">
         <div style={{ opacity: 0 }} className="arrow-1">
           <CaretLeftOutlined
+            className="arrow-1-1"
             style={{ ...constantStyle2 }}
             onClick={() => CounterSwitcher > 0 && OnClickHandlerArrows(CounterSwitcher - 1)}
           />
@@ -67,6 +77,7 @@ function SecondSection() {
         </div>
         <div style={{ opacity: 0 }} className="arrow-2">
           <CaretRightOutlined
+            className="arrow-1-1"
             style={{ ...constantStyle2 }}
             onClick={() => CounterSwitcher <= 0 && OnClickHandlerArrows(CounterSwitcher + 1)}
           />

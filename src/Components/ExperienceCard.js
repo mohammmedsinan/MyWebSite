@@ -25,7 +25,7 @@ function ExperienceCard({ img, HoverText, typeOfIt, color }) {
           cursor: 'pointer',
         }}
       >
-        <img src={img} style={{ width: '10vw' }} className="section-2-img" />
+        <img src={img} style={{ width: '10vw' }} className="section-2-img" alt={HoverText} />
       </div>
     </Popover>
   );
