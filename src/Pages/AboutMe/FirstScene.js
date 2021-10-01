@@ -25,9 +25,13 @@ function FirstScene({
 }) {
   const TL = gsap.timeline({ defaults: { duration: 0.7, ease: Power2.easeInOut } });
   useEffect(() => {
-    TL.fromTo('.section-3-introduction-1', { y: '-200vh' }, { y: '7%' });
-    TL.fromTo('.section-3-introduction-2', { y: '-200vh' }, { y: '6vh' });
-    TL.fromTo('.section-3-introduction-3', { y: '-200vh' }, { y: '10vh', ease: Power2.easeInOut });
+    TL.fromTo('.section-3-introduction-1', { y: '-200vh', opacity: 0 }, { y: '7%', opacity: 1 });
+    TL.fromTo('.section-3-introduction-2', { y: '-200vh', opacity: 0 }, { y: '6vh', opacity: 1 });
+    TL.fromTo(
+      '.section-3-introduction-3',
+      { y: '-200vh', opacity: 0 },
+      { y: '10vh', opacity: 1, ease: Power2.easeInOut },
+    );
     TL.to('.section-3-container', { x: '-100%', ease: Power2.easeInOut }, 3);
     TL.to('.section-3-container', { display: 'none' }, 3);
     TL.fromTo('.section-3-h1-1', { scale: 100 }, { scale: 7, opacity: 1 });
@@ -83,12 +87,27 @@ function FirstScene({
     <div style={{ overflow: 'hidden', width: '100vw', height: '100vh' }}>
       <div>
         {/* A Scene Start*/}
-        <div className="section-3-container">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <h1 className="section-3-introduction-1">Hello</h1>
+        <div
+          className="section-3-container"
+          style={{
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            flexDirection: 'column',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <h1 className="section-3-introduction-1" style={{ opacity: 0 }}>
+              Hello
+            </h1>
             <h1
               className="section-3-introduction-2"
-              style={{ ...stylesintroduction2, ...mainStyle }}
+              style={{ ...stylesintroduction2, ...mainStyle, opacity: 0 }}
             >
               ,
             </h1>
@@ -99,14 +118,11 @@ function FirstScene({
               color: 'white',
               textAlign: 'center',
               fontSize: '60px',
+              opacity: 0,
               ...stylesintroduction3,
             }}
           >
-            I am_
-            <span className="section-5-span-1" style={{ color: '#ac8fd3', fontSize: '80px' }}>
-              Mohammed
-            </span>
-            , Nice to meet you
+            I am Mohammed , it's Nice to meet you
           </h1>
         </div>
         {/* A Scene End*/}
@@ -184,10 +200,10 @@ function FirstScene({
               className="section-3-h1-5"
             >
               <span>, </span>
-              <span style={{ color: '#339e40' }}>M</span>
-              <span style={{ color: '#cc7c6e' }}>E</span>
-              <span style={{ color: '#73ceec' }}>R</span>
-              <span style={{ color: '#9abe48' }}>N</span>
+              <span style={{ color: '#339e40', fontWeight: 'bold' }}>M</span>
+              <span style={{ color: '#cc7c6e', fontWeight: 'bold' }}>E</span>
+              <span style={{ color: '#73ceec', fontWeight: 'bold' }}>R</span>
+              <span style={{ color: '#9abe48', fontWeight: 'bold' }}>N</span>
               <p style={{ display: 'inline' }}> Stack</p>
             </h1>
           </div>

@@ -86,6 +86,9 @@
     display: block !important;
   }
 
+  .section-3-container {
+    height: 100vh;
+  }
 }
 
 @media(max-width:600px) {
@@ -93,6 +96,10 @@
     flex-direction: column !important;
     text-align: center;
     margin: 20px 0px;
+  }
+
+  .section-3-container {
+    height: 100vh;
   }
 
   .last-header-1 {

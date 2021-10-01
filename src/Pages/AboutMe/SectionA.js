@@ -17,7 +17,11 @@ function SectionA() {
                 padding: '0px 20px',
               }}
             >
-              <ReUseAble color="#9DF48D" text="Programming a full website" />
+              <ReUseAble
+                color="#9DF48D"
+                text="Programming a full website"
+                DUMYTEXT="Building Website with any technologies that chose from the customer "
+              />
               <ReUseAble color="#00B8EC" text="Illustration art for the websites" />
             </div>
             <div

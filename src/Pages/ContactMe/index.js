@@ -33,7 +33,7 @@ function index() {
       <div />
       <div>
         <h1 style={{ color: 'white', fontSize: '100px' }} className="section-5-h1">
-          Mohammed Sinan
+          Be free to contacting me
         </h1>
       </div>
       <div
@@ -60,10 +60,9 @@ function index() {
           height: '40vh',
         }}
       >
+        <Input placeholder="Input Your Name" style={{ width: '70vw', height: '6vh' }} />
         <Input placeholder="Input Your Gmail" style={{ width: '70vw', height: '6vh' }} />
         <Input placeholder="Input Your Password" style={{ width: '70vw', height: '6vh' }} />
-        <Input placeholder="Input Your Password" style={{ width: '70vw', height: '6vh' }} />
-        <Input placeholder="Input Your Name" style={{ width: '70vw', height: '6vh' }} />
         <Button
           style={{ color: 'white', backgroundColor: '#ac8fd3', border: 'none', width: '100px' }}
         >
